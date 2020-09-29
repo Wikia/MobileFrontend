@@ -17,7 +17,7 @@
     "lint:modules": "resource-modules ./"
   },
   "engines": {
-    "node": "10.15.2"
+    "node": "10.22.0"
   },
   "pre-commit": "precommit",
   "devDependencies": {
