@@ -202,7 +202,7 @@ module.exports = ( env, argv ) => ( {
 		// module.exports of mobile.startup.js.
 		library: [ 'mfModules', '[name]' ],
 		libraryTarget: 'this',
-		jsonpFunction: 'jsonElo123'
+		jsonpFunction: 'mobileFrontendJsonp'
 	},
 
 	// Accurate source maps at the expense of build time. The source map is intentionally exposed
