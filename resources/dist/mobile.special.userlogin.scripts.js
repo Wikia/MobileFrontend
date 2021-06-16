@@ -1,2 +1,2 @@
-this.mfModules=this.mfModules||{},this.mfModules["mobile.special.userlogin.scripts"]=(window.jsonElo123=window.jsonElo123||[]).push([[16],{"./src/mobile.special.userlogin.scripts.js":function(s,i){$(function(){$("#wpRemember").prop("checked",!0)})}},[["./src/mobile.special.userlogin.scripts.js",0]]]);
+this.mfModules=this.mfModules||{},this.mfModules["mobile.special.userlogin.scripts"]=(window.mobileFrontendJsonp=window.mobileFrontendJsonp||[]).push([[16],{"./src/mobile.special.userlogin.scripts.js":function(s,e){$(function(){$("#wpRemember").prop("checked",!0)})}},[["./src/mobile.special.userlogin.scripts.js",0]]]);
 //# sourceMappingURL=mobile.special.userlogin.scripts.js.map.json
