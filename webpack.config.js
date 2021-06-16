@@ -201,7 +201,8 @@ module.exports = ( env, argv ) => ( {
 		// This is useful for debugging. E.g., mfModules['mobile.startup'] is set by the
 		// module.exports of mobile.startup.js.
 		library: [ 'mfModules', '[name]' ],
-		libraryTarget: 'this'
+		libraryTarget: 'this',
+		jsonpFunction: 'mobileFrontendJsonp'
 	},
 
 	// Accurate source maps at the expense of build time. The source map is intentionally exposed
