@@ -9,7 +9,6 @@
 var skin,
 	{ USER_FONT_SIZE_REGULAR, USER_FONT_SIZES } = require( '../constants' ),
 	storage = mw.storage,
-	toggling = require( './toggling' ),
 	lazyLoadedImages = require( './lazyLoadedImages' ),
 	skinName = mw.config.get( 'skin' ),
 	isPageContentModelEditable = mw.config.get( 'wgMFIsPageContentModelEditable' ),
@@ -122,7 +121,6 @@ if ( !currentPage.inNamespace( 'special' ) && isPageContentModelEditable ) {
 	}
 }
 
-toggling();
 lazyLoadedImages();
 
 // Set up recording for the events we track. The module 'ext.eventLogging'
