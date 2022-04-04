@@ -37,7 +37,6 @@ module.exports = {
 	Watchstar: require( './watchstar/watchstar' ),
 	eventBusSingleton: require( './eventBusSingleton' ),
 	promisedView: require( './promisedView' ),
-	Toggler: require( './Toggler' ),
 	toc: {
 		// In case any old version of Minerva is cached.
 		TableOfContents: () => {
