@@ -7,7 +7,6 @@
 let url;
 
 const
-	toggling = require( './toggling' ),
 	FONT_SIZE_KEY = 'mf-font-size',
 	SECTION_COLLAPSING_TOGGLE = 'mf-expand-sections',
 	storage = mw.storage,
@@ -128,5 +127,4 @@ function migrateLegacyExpandAllSectionsToggle() {
 
 migrateXLargeToLarge();
 migrateLegacyExpandAllSectionsToggle();
-toggling();
 lazyLoadedImages();
