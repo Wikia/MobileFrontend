@@ -2,6 +2,7 @@
 
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Storage\RevisionRecord;
+use MediaWiki\User\UserFactory;
 use Wikimedia\IPUtils;
 use Wikimedia\Rdbms\IResultWrapper;
 
@@ -41,7 +42,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		// Convert user page URL to User object.
 		$user = $this->userFactory->newFromName( $title->getText() );
 		// Doing this as UserFactory can return null.
-		$user = $user ?: false;
+		$user = $user ?: $this->userFactory->newAnonymous();
 		$icon = $user->isAnon() ? 'userAnonymous' : 'userAvatar';
 
 		return Html::rawElement( 'a',
@@ -64,8 +65,8 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 
 		if ( $par || $target ) {
 			$this->user = $par
-				? $this->getUserFactory()->newFromName( $par )
-				: $this->getUserFactory()->newFromName( $target );
+				? $this->getUserFactory()->newFromName( $par, UserFactory::RIGOR_NONE )
+				: $this->getUserFactory()->newFromName( $target, UserFactory::RIGOR_NONE );
 		}
 
 		if (
