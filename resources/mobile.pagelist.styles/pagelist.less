@@ -34,12 +34,19 @@
 	li {
 		color: @colorGray5;
 		position: relative;
-		border-bottom: 1px solid @grayLightest;
+		border-bottom: 1px solid var(--fandom-border-color);
 		padding-top: @itemPaddingV;
 		padding-bottom: @itemPaddingV;
 		// avoid the gap between thumbnails
 		margin: -1px 0 0;
 		line-height: 19px;
+
+	  .edit-summary {
+		color: var(--theme-page-text-color);
+	  }
+	  .mw-ui-icon {
+		color: var(--theme-page-text-color);
+	  }
 
 		// FIXME: use more generic class here to apply to any icon in a page list
 		.watch-this-article {
@@ -132,6 +139,7 @@
 		.timestamp {
 			// accommodate for higher font-size of h3 to the right of timestamp
 			margin-bottom: 0.65em;
+		  	color: var(--theme-page-text-color);
 		}
 	}
 }
