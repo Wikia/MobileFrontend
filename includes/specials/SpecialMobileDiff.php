@@ -360,8 +360,6 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				'data-user-name' => $user->getName(),
 				'data-user-gender' => $this->getUserOptionsLookup()->getOption( $user, 'gender' ),
 			];
-			// Note we do not use LinkRenderer here as this will render
-			// a broken link if the user page does not exist
 			$undoTooltip = $this->targetTitle
 				? [ 'class' => 'mw-mf-undo', 'title' => $this->msg( 'tooltip-undo' )->text() ]
 				: [];
@@ -375,6 +373,8 @@ class SpecialMobileDiff extends MobileSpecialPage {
 					'undo' => $this->revId
 				]
 			);
+            // Note we do not use LinkRenderer here as this will render
+			// a broken link if the user page does not exist
 			$output->addHTML(
 				Html::openElement( 'div', $attrs ) .
 				$this->getLinkRenderer()->makeLink(
