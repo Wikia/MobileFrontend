@@ -140,6 +140,18 @@ footer {
 		margin-top: 1em;
 	}
 
+	.mw-mf-bytesadded::before {
+	  	background-color: #14866d;
+	}
+
+  	.mw-mf-bytesneutral::before {
+	  	background-color: var(--theme-page-text-color);
+	}
+
+	.mw-mf-bytesremoved::before {
+	  	background-color: #dd3333;
+	}
+
 	// FIXME: Overly specific selector
 	#mw-mf-userinfo {
 		height: @userInfoHeight;
@@ -152,6 +164,18 @@ footer {
 
 		.mw-mf-user {
 			margin-bottom: 0.7em;
+		}
+
+	  	.mw-mf-user::before {
+		  	background-color: var(--theme-page-text-color);
+		}
+
+	  	.mw-mf-undo {
+			background-color: #9b004e;
+			border-radius: 3px;
+			color: #fff;
+			padding: 6px 12px;
+			float: right;
 		}
 
 		.mw-mf-edit-count {
