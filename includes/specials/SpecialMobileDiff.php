@@ -357,7 +357,20 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				'data-user-name' => $user->getName(),
 				'data-user-gender' => $this->getUserOptionsLookup()->getOption( $user, 'gender' ),
 			];
-			// Note we do not use LinkRenderer here as this will render
+			$undoTooltip = $this->targetTitle
+				? [ 'class' => 'mw-mf-undo', 'title' => $this->msg( 'tooltip-undo' )->text() ]
+				: [];
+			$undoLink = $this->getLinkRenderer()->makeLink(
+				$this->targetTitle,
+				$this->msg('editundo')->text(),
+				$undoTooltip,
+				[
+					'action' => 'edit',
+					'undoafter' => $this->getPrevId(),
+					'undo' => $this->revId
+				]
+			);
+            // Note we do not use LinkRenderer here as this will render
 			// a broken link if the user page does not exist
 			$output->addHTML(
 				Html::openElement( 'div', $attrs ) .
@@ -369,8 +382,13 @@ class SpecialMobileDiff extends MobileSpecialPage {
 					// for user pages that do not exist. We want to allow access to contributions
 					[ 'action' => 'view' ]
 				) .
-				'</div>' .
-				'<div class="mw-mf-roles meta">' .
+				'</div>'
+			);
+			if ($this->getPrevId() && $this->getAuthority()->probablyCan('edit', $this->targetTitle)) {
+				$output->addHTML($undoLink);
+			}
+			$output->addHTML(
+		        '<div class="mw-mf-roles meta">' .
 					$this->listGroups( $user, $this->mobileContext ) .
 				'</div>' .
 				'<div class="mw-mf-edit-count meta">' .
