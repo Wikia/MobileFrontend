@@ -1,7 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
-use MediaWiki\Storage\RevisionRecord;
+use MediaWiki\Revision\RevisionRecord;
 use Wikimedia\IPUtils;
 use Wikimedia\Rdbms\IResultWrapper;
 
@@ -201,8 +201,16 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		}
 		$isMinor = $rev->isMinor();
 		$title = Title::newFromLinkTarget( $rev->getPageAsLinkTarget() );
-		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment,
-			$title, $user->isAnon(), $bytes, $isMinor
+		$this->renderFeedItemHtml( [
+			'ts' => $ts,
+			'diffLink' => $diffLink,
+			'username' => $username,
+			'comment' => $comment,
+			'title' => $title,
+			'isAnon' => $user->isAnon(),
+			'bytes' => $bytes,
+			'isMinor' => $isMinor
+			]
 		);
 	}
 
