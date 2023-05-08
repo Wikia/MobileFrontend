@@ -206,6 +206,8 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	 * @param ?RevisionRecord $prev Revision of previous Revision to display the difference
 	 */
 	private function showRow( RevisionRecord $rev, ?RevisionRecord $prev ) {
+    $hookContainer = MediaWikiServices::getInstance()->getHookContainer();
+		$out = $this->getOutput();
 		$unhide = $this->getRequest()->getBool( 'unhide' );
 		$user = $this->getUser();
 		$username = $this->getUsernameText( $rev, $user, $unhide );
@@ -263,6 +265,11 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			'isMinor' => $isMinor,
 		];
 		$this->renderFeedItemHtml( $options );
+
+		$hookContainer->run(
+			'BeforeSpecialHistoryRowDisplay',
+			[ &$out, $this->mobileContext, $rev ]
+		);
 	}
 
 	/**
