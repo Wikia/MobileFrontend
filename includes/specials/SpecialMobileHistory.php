@@ -206,7 +206,6 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	 * @param ?RevisionRecord $prev Revision of previous Revision to display the difference
 	 */
 	private function showRow( RevisionRecord $rev, ?RevisionRecord $prev ) {
-    $hookContainer = MediaWikiServices::getInstance()->getHookContainer();
 		$out = $this->getOutput();
 		$unhide = $this->getRequest()->getBool( 'unhide' );
 		$user = $this->getUser();
@@ -266,10 +265,13 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		];
 		$this->renderFeedItemHtml( $options );
 
+    // Fandom change UGC-4121 add hook to allow for additional buttons to every history revision
+    $hookContainer = MediaWikiServices::getInstance()->getHookContainer();
 		$hookContainer->run(
 			'BeforeSpecialHistoryRowDisplay',
 			[ &$out, $this->mobileContext, $rev ]
 		);
+    // End Fandom change UGC-4121
 	}
 
 	/**
