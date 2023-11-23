@@ -76,9 +76,9 @@ final class Manager {
 
 	/**
 	 * Get the UGC-4299 Experiment active variant
-	 * @return string
+	 * @return string | null
 	 */
-	public function getAMCExperimentVariant(): string {
+	public function getAMCExperimentVariant(): string | null {
 		return $this->mobileContext->getRequest()->getCookie( self::EXPERIMENT_COOKIE_NAME, '' );
 	}
 
