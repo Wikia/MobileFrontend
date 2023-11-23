@@ -69,4 +69,16 @@ final class Manager {
 	public function getModeIdentifier() {
 		return self::AMC_MODE_IDENTIFIER;
 	}
+
+	// START UGC-4299 Experiment enable AMC by default for users
+
+	/**
+	 * Get the UGC-4299 Experiment active variant
+	 * @return string | null
+	 */
+	public function getAMCExperimentVariant(): string | null {
+		return $this->mobileContext->getRequest()->getCookie( self::EXPERIMENT_COOKIE_NAME, '' );
+	}
+
+	// END UGC-4299 Experiment enable AMC by default for users
 }
