@@ -88,6 +88,13 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	private function buildAMCToggle() {
 		/** @var \MobileFrontend\Amc\UserMode $userMode */
 			$userMode = $this->services->getService( 'MobileFrontend.AMC.UserMode' );
+
+			// START UGC-4299 Experiment enable AMC by default for users
+			if ( $userMode->isAMCSwitchHidden() ) {
+				return;
+			}
+			// END UGC-4299 Experiment enable AMC by default for users
+
 			$amcToggle = new OOUI\CheckboxInputWidget( [
 				'name' => 'enableAMC',
 				'infusable' => true,
