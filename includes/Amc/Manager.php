@@ -11,6 +11,9 @@ use MobileContext;
  * @package MobileFrontend\Amc
  */
 final class Manager {
+	private const EXPERIMENT_COOKIE_NAME = 'experiment-enable-amc';
+	public const EXPERIMENT_ENABLE_AMC_VARIANT = 'experiment-amc-enabled-variant';
+
 	/**
 	 * A config name used to enable/disable the AMC mode
 	 */
@@ -68,4 +71,16 @@ final class Manager {
 	public function getModeIdentifier() {
 		return self::AMC_MODE_IDENTIFIER;
 	}
+
+	// START UGC-4299 Experiment enable AMC by default for users
+
+	/**
+	 * Get the UGC-4299 Experiment active variant
+	 * @return string | null
+	 */
+	public function getAMCExperimentVariant(): string | null {
+		return $this->mobileContext->getRequest()->getCookie( self::EXPERIMENT_COOKIE_NAME, '' );
+	}
+
+	// END UGC-4299 Experiment enable AMC by default for users
 }
