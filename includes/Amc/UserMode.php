@@ -13,6 +13,7 @@ use RuntimeException;
 class UserMode implements IUserMode, IUserSelectableMode {
 
 	public const USER_OPTION_MODE_AMC = 'mf_amc_optin';
+
 	/**
 	 * Value in the user options when AMC is enabled
 	 */
@@ -74,14 +75,6 @@ class UserMode implements IUserMode, IUserSelectableMode {
 	 * @return bool
 	 */
 	public function isEnabled() {
-		// START UGC-4299 Experiment enable AMC by default for users
-		$experimentVariant = $this->amc->getAMCExperimentVariant();
-
-		if ( $experimentVariant ) {
-			return $experimentVariant === Manager::EXPERIMENT_ENABLE_AMC_VARIANT;
-		}
-		// END UGC-4299 Experiment enable AMC by default for users
-
 		$userOption = $this->userOptionsLookup->getOption(
 			$this->userIdentity,
 			self::USER_OPTION_MODE_AMC,
@@ -90,19 +83,6 @@ class UserMode implements IUserMode, IUserSelectableMode {
 		return $this->amc->isAvailable() &&
 			 $userOption === self::OPTION_ENABLED;
 	}
-
-	// START UGC-4299 Experiment enable AMC by default for users
-
-	/**
-	 * Get information if the AMC switch should be hidden for current user
-	 * It's require for experiment purpose UGC-4299
-	 * @return bool
-	 */
-	public function isAMCSwitchHidden(): bool {
-		return !empty( $this->amc->getAMCExperimentVariant() );
-	}
-
-	// END UGC-4299 Experiment enable AMC by default for users
 
 	/**
 	 * Set Advanced Mobile Contributions mode to enabled or disabled.
@@ -114,13 +94,6 @@ class UserMode implements IUserMode, IUserSelectableMode {
 	 * @throws RuntimeException when mode is disabled
 	 */
 	public function setEnabled( bool $isEnabled ) {
-		// START UGC-4299 Experiment enable AMC by default for users
-		$experimentVariant = $this->amc->getAMCExperimentVariant();
-		if ( $experimentVariant ) {
-			throw new RuntimeException( 'AMC Mode is not available' );
-		}
-		// END UGC-4299 Experiment enable AMC by default for users
-
 		if ( !$this->amc->isAvailable() ) {
 			throw new RuntimeException( 'AMC Mode is not available' );
 		}
