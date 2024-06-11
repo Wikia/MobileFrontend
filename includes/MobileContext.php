@@ -315,6 +315,12 @@ class MobileContext extends ContextSource {
 			return true;
 		}
 
+		// UXFCP-4664 If useskin with non-mobile skin is defined, we should not view mobile layout
+		$useSkin = $this->getRequest()->getRawVal( 'useskin', '' );
+		if ( !empty( $useSkin ) && $useSkin !== 'fandommobile' ) {
+			return false;
+		}
+
 		if ( $this->getRequest()->getRawVal( 'mobileformat' ) !== null ) {
 			return true;
 		}
