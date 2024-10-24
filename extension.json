@@ -117,7 +117,7 @@
 			]
 		},
 		"mobile.placeholder.images": {
-			"class": "ResourceLoaderImageModule",
+			"class": "MediaWiki\\ResourceLoader\\ImageModule",
 			"useDataURI": false,
 			"selector": ".{name}",
 			"images": {
@@ -159,7 +159,7 @@
 			]
 		},
 		"mobile.init": {
-			"class": "ResourceLoaderLessVarFileModule",
+			"class": "MediaWiki\\ResourceLoader\\LessVarFileModule",
 			"lessMessages": [
 				"mobile-frontend-tap-to-display-image"
 			],
