@@ -138,7 +138,7 @@
 			]
 		},
 		"mobile.startup.images": {
-			"class": "ResourceLoaderOOUIIconPackModule",
+			"class": "MediaWiki\\ResourceLoader\\OOUIIconPackModule",
 			"defaultColor": "#54595d",
 			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
 			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
@@ -200,7 +200,7 @@
 			]
 		},
 		"mobile.ooui.icons": {
-			"class": "ResourceLoaderOOUIIconPackModule",
+			"class": "MediaWiki\\ResourceLoader\\OOUIIconPackModule",
 			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
 			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
 			"variants": {
@@ -230,7 +230,7 @@
 			]
 		},
 		"mobile.user.icons": {
-			"class": "ResourceLoaderOOUIIconPackModule",
+			"class": "MediaWiki\\ResourceLoader\\OOUIIconPackModule",
 			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
 			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
 			"targets": [
@@ -420,7 +420,7 @@
 			]
 		},
 		"mobile.editor.images": {
-			"class": "ResourceLoaderOOUIIconPackModule",
+			"class": "MediaWiki\\ResourceLoader\\OOUIIconPackModule",
 			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
 			"icons": [
 				"block"
@@ -642,7 +642,7 @@
 			]
 		},
 		"mobile.special.mobilediff.images": {
-			"class": "ResourceLoaderOOUIIconPackModule",
+			"class": "MediaWiki\\ResourceLoader\\OOUIIconPackModule",
 			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
 			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
 			"variants": {
