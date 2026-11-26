@@ -3,11 +3,15 @@
 		"authors": [
 			"Menachem.Moreira",
 			"Universal Life",
-			"WikiiiTranslator"
+			"WikiiiTranslator",
+			"Maor X"
 		]
 	},
+	"mobile-frontend-copyright": "El kontenido esta disponible basho $1, manko ke seya de otro modo notado.",
 	"mobile-frontend-language-heading": "<strong>Lenguas</strong>",
-	"mobile-frontend-view": "Versión para selulares",
+	"mobile-frontend-terms-text": "Termos de uso",
+	"mobile-frontend-view": "Vista mobil",
+	"mobile-frontend-view-desktop": "Vista désktop",
 	"mobile-frontend-watchlist-filter-all": "Todos",
 	"mobile-frontend-watchlist-filter-articles": "Pajinas",
 	"mobile-frontend-watchlist-more": "mas",

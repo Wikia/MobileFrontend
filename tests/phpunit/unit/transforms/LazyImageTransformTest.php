@@ -206,7 +206,6 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 		$imgStyleBad = '<img src="bigPicture.jpg" style=" width: 84.412ex ; '
 			. ' vertical-align  :  top ;  height:70.343ex; background:   none;   ">';
 
-		// `width` and `height` should be added in front of string
 		$placeholderStyle = '<span class="lazy-image-placeholder" '
 			. 'style="width: 84.412ex;height: 70.343ex;vertical-align: top;" '
 			. 'data-mw-src="bigPicture.jpg">&nbsp;</span>';
