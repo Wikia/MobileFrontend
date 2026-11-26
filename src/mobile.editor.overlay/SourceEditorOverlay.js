@@ -44,11 +44,11 @@ function SourceEditorOverlay( options, dataPromise ) {
 	}
 	if ( this.readOnly ) {
 		options.readOnly = true;
-		options.editingMsg = mw.msg( 'mobile-frontend-editor-viewing-source-page', options.title );
+		options.editingMsg = mw.message( 'mobile-frontend-editor-viewing-source-page', options.title ).parse();
 	} else {
-		options.editingMsg = mw.msg( 'mobile-frontend-editor-editing-page', options.title );
+		options.editingMsg = mw.message( 'mobile-frontend-editor-editing-page', options.title ).parse();
 	}
-	options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
+	options.previewingMsg = mw.message( 'mobile-frontend-editor-previewing-page', options.title ).parse();
 	EditorOverlayBase.call(
 		this,
 		util.extend( true,
@@ -285,7 +285,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 			self.$preview.replaceWith(
 				new MessageBox( {
 					type: 'error',
-					msg: mw.msg( 'mobile-frontend-editor-error-preview' )
+					msg: mw.message( 'mobile-frontend-editor-error-preview' ).escaped()
 				} ).$el
 			);
 			hideSpinnerAndShowPreview();

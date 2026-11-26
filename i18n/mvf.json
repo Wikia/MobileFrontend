@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Enkhsaihan2005",
-			"Wikibilig"
+			"Wikibilig",
+			"Anand.orkhon"
 		]
 	},
+	"mobile-frontend-copyright": "ᠲᠤᠰᠬᠠᠢ ᠲᠠᠢᠯᠪᠤᠷᠢ ᠪᠠᠢᠬᠤ᠎ᠦᠭᠡᠢ ᠪᠣᠯ ᠡᠨᠡ ᠠᠭᠤᠯᠭ᠎ᠠ᠎ᠶᠢ $1 ᠯᠢᠼᠧᠨᠽᠢ᠎ᠶᠢᠨ ᠳᠠᠭᠠᠤ ᠬᠡᠷᠡᠭᠯᠡᠬᠦ ᠪᠣᠯᠤᠮᠵᠢ᠎ᠲᠠᠢ᠃",
 	"mobile-frontend-terms-text": "ᠬᠡᠷᠡᠭᠯᠡᠬᠦ ᠨᠥᠬᠦᠴᠡᠯ",
-	"mobile-frontend-view": "ᠮᠣᠪᠠᠶᠢᠯ ᠬᠤᠪᠢᠯᠪᠤᠷᠢ",
+	"mobile-frontend-view": "ᠭᠠᠷ ᠤᠲᠠᠰᠤᠨ᠎ᠤ ᠬᠤᠪᠢᠯᠪᠤᠷᠢ",
 	"mobile-frontend-view-desktop": "ᠴᠠᠬᠢᠮ ᠲᠣᠭᠠᠴᠠᠭᠠᠯᠠᠭᠤᠷ ᠲᠤ"
 }

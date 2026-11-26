@@ -55,7 +55,12 @@
 			"Vlad5250",
 			"Wirbel78",
 			"Александр Сигачёв",
-			"Дмитрий"
+			"Дмитрий",
+			"Yurina Tatiana",
+			"Vonavy",
+			"Engineer56",
+			"Etonkovidova",
+			"Mitte27"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Редактирует ли участник через мобильный интерфейс ($1)",
@@ -119,6 +124,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Просмотр исходного текста</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Правка публикуется, пожалуйста, подождите.",
 	"mobile-frontend-editor-loading": "Загрузка редактора…",
+	"mobile-frontend-editor-loadingtooslow": "Медленное соединение?",
 	"mobile-frontend-editor-loadbasiceditor": "Переключиться в редактор кода",
 	"mobile-frontend-editor-toload": "Редактор скоро загрузится. Если через несколько секунд вы будете по-прежнему видеть это сообщение, пожалуйста, [$1 перезагрузите страницу].",
 	"mf-expand-sections-description": "Всегда раскрывать на страницах разделы с содержанием по умолчанию.",
@@ -143,7 +149,7 @@
 	"mobile-frontend-language-heading": "<strong>Языки</strong>",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Предлагаемые языки",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Другие языки",
-	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Поиск языка",
+	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Найти язык",
 	"mobile-frontend-languages-structured-overlay-no-results": "Язык недоступен",
 	"mobile-frontend-languages-structured-overlay-error": "Произошла ошибка при загрузке языков на этой странице.",
 	"mobile-frontend-languages-structured-overlay-no-results-body": "Язык, который вы ищете, недоступен.",
